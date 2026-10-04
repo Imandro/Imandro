@@ -158,13 +158,13 @@ def awards(y, t):
         body.append(f'<text class="g b" style="font-size:15px" xml:space="preserve" '
                     f'x="0" y="{y + r*LH}" clip-path="url(#v{r})">{s}</text>')
     t += 0.5
-    y += 7 * LH + 20
+    y += 7 * LH + 40
     for lab in AWARDS_LABEL:
         body.append(f'<text class="l w b" style="animation-delay:{t:.2f}s;font-size:15px" x="0" y="{y}">{escape(lab)}</text>')
-        y += 22
+        y += 24
         t += 0.15
     body.append(f'<text class="l g" style="animation-delay:{t:.2f}s;font-size:14px" x="0" y="{y}">ganados</text>')
-    return body, defs, 360, y + 20, t
+    return body, defs, 360, y + 28, t
 
 
 def heatmap(t):
