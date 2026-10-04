@@ -34,17 +34,17 @@
 <text class="l" style="animation-delay:2.24s" x="34" y="578"><tspan class="g">▸</tspan> <tspan class="w b">Baymax</tspan><tspan class="t" dx="8">Baymax es una aplicación web de asistencia médica . Permite a los usuarios con…</tspan><tspan class="p" dx="8">HTML</tspan></text>
 <text class="l t" style="animation-delay:2.30s" x="26" y="608">lenguajes en mis repos</text>
 <clipPath id="lb"><rect x="26" y="620" width="808" height="10" rx="5"/></clipPath><g clip-path="url(#lb)">
-<rect x="26.0" y="620" width="310.8" height="10" fill="#e34c26"/>
-<rect x="336.8" y="620" width="124.3" height="10" fill="#3178c6"/>
-<rect x="461.1" y="620" width="124.3" height="10" fill="#3572A5"/>
-<rect x="585.4" y="620" width="124.3" height="10" fill="#f1e05a"/>
-<rect x="709.7" y="620" width="62.2" height="10" fill="#dea584"/>
-<rect x="771.8" y="620" width="62.2" height="10" fill="#00B4AB"/>
+<rect x="26.0" y="620" width="288.6" height="10" fill="#e34c26"/>
+<rect x="314.6" y="620" width="173.1" height="10" fill="#3572A5"/>
+<rect x="487.7" y="620" width="115.4" height="10" fill="#3178c6"/>
+<rect x="603.1" y="620" width="115.4" height="10" fill="#f1e05a"/>
+<rect x="718.6" y="620" width="57.7" height="10" fill="#dea584"/>
+<rect x="776.3" y="620" width="57.7" height="10" fill="#00B4AB"/>
 </g>
-<circle cx="31" cy="646" r="5" fill="#e34c26"/><text class="t" x="41" y="650">HTML 38%</text>
-<circle cx="121.6" cy="646" r="5" fill="#3178c6"/><text class="t" x="131.6" y="650">TypeScript 15%</text>
-<circle cx="255.4" cy="646" r="5" fill="#3572A5"/><text class="t" x="265.4" y="650">Python 15%</text>
-<circle cx="360.4" cy="646" r="5" fill="#f1e05a"/><text class="t" x="370.4" y="650">JavaScript 15%</text>
-<circle cx="494.2" cy="646" r="5" fill="#dea584"/><text class="t" x="504.2" y="650">Rust 8%</text>
-<circle cx="577.6" cy="646" r="5" fill="#00B4AB"/><text class="t" x="587.6" y="650">Dart 8%</text>
+<circle cx="31" cy="646" r="5" fill="#e34c26"/><text class="t" x="41" y="650">HTML 36%</text>
+<circle cx="121.6" cy="646" r="5" fill="#3572A5"/><text class="t" x="131.6" y="650">Python 21%</text>
+<circle cx="226.6" cy="646" r="5" fill="#3178c6"/><text class="t" x="236.6" y="650">TypeScript 14%</text>
+<circle cx="360.4" cy="646" r="5" fill="#f1e05a"/><text class="t" x="370.4" y="650">JavaScript 14%</text>
+<circle cx="494.2" cy="646" r="5" fill="#dea584"/><text class="t" x="504.2" y="650">Rust 7%</text>
+<circle cx="577.6" cy="646" r="5" fill="#00B4AB"/><text class="t" x="587.6" y="650">Dart 7%</text>
 </svg>
