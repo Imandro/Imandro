@@ -1,41 +1,41 @@
 <div align="center">
 
-<img src="./banner.svg" width="860" />
+<img src="./banner.svg" alt="IMANDRO" width="860" />
 
 <br><br>
 
-<h3><code>imandro@github ~ $ cat about.md</code></h3>
-<img src="./about.svg" width="860" />
+<p><code>imandro@github ~ $ cat about.md</code></p>
+<img src="./about.svg" alt="Sobre mí" width="860" />
 
 <br><br>
 
-<h3><code>imandro@github ~ $ ./contributions.sh</code></h3>
-<img src="./contrib-heatmap.svg" width="860" />
+<p><code>imandro@github ~ $ ./contributions.sh</code></p>
+<img src="./contrib-heatmap.svg" alt="Mapa de contribuciones de los últimos 365 días" width="860" />
 
 <br><br>
 
-<h3><code>imandro@github ~ $ whoami</code></h3>
+<p><code>imandro@github ~ $ whoami</code></p>
 <table>
 <tr>
-<td valign="top"><img src="./avi-ascii.svg" width="370" /></td>
-<td valign="top"><img src="./info-card.svg" width="490" /></td>
+<td valign="top"><img src="./avi-ascii.svg" alt="Retrato ASCII" width="370" /></td>
+<td valign="top"><img src="./info-card.svg" alt="Tarjeta de información" width="490" /></td>
 </tr>
 </table>
 
 <br><br>
 
-<h3><code>imandro@github ~ $ ./trofeos --contar</code></h3>
-<img src="./awards.svg" width="860" />
+<p><code>imandro@github ~ $ ./trofeos --contar</code></p>
+<img src="./awards.svg" alt="Logros en concursos y eventos tecnológicos" width="860" />
 
 <br><br>
 
-<h3><code>imandro@github ~ $ cat stack.yml</code></h3>
-<img src="./tech.svg" width="860" />
+<p><code>imandro@github ~ $ cat stack.yml</code></p>
+<img src="./tech.svg" alt="Tecnologías y herramientas" width="860" />
 
 <br><br>
 
-<h3><code>imandro@github ~ $ ls projects/</code></h3>
-<img src="./projects.svg" width="860" />
+<p><code>imandro@github ~ $ ls projects/</code></p>
+<img src="./projects.svg" alt="Proyectos destacados" width="860" />
 
 <br>
 
