@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394 374" width="394" height="374">
+<style>text{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:5.7px;fill:#c9d1d9;white-space:pre}</style>
+<rect width="100%" height="100%" rx="10" fill="#0d1117"/>
+<defs>
+<clipPath id="r0"><rect x="10" y="9.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.00s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r1"><rect x="10" y="15.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.07s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r2"><rect x="10" y="22.6" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.14s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r3"><rect x="10" y="29.4" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.21s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r4"><rect x="10" y="36.2" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.28s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r5"><rect x="10" y="43.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.35s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r6"><rect x="10" y="49.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.42s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r7"><rect x="10" y="56.6" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.49s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r8"><rect x="10" y="63.4" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.56s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r9"><rect x="10" y="70.2" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.63s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r10"><rect x="10" y="77.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.70s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r11"><rect x="10" y="83.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.77s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r12"><rect x="10" y="90.6" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.84s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r13"><rect x="10" y="97.4" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.91s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r14"><rect x="10" y="104.2" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="0.98s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r15"><rect x="10" y="111.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.05s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r16"><rect x="10" y="117.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.12s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r17"><rect x="10" y="124.6" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.19s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r18"><rect x="10" y="131.4" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.26s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r19"><rect x="10" y="138.2" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.33s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r20"><rect x="10" y="145.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.40s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r21"><rect x="10" y="151.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.47s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r22"><rect x="10" y="158.6" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.54s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r23"><rect x="10" y="165.4" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.61s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r24"><rect x="10" y="172.2" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.68s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r25"><rect x="10" y="179.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.75s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r26"><rect x="10" y="185.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.82s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r27"><rect x="10" y="192.6" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.89s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r28"><rect x="10" y="199.4" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="1.96s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r29"><rect x="10" y="206.2" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.03s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r30"><rect x="10" y="213.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.10s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r31"><rect x="10" y="219.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.17s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r32"><rect x="10" y="226.6" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.24s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r33"><rect x="10" y="233.4" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.31s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r34"><rect x="10" y="240.2" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.38s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r35"><rect x="10" y="247.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.45s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r36"><rect x="10" y="253.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.52s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r37"><rect x="10" y="260.6" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.59s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r38"><rect x="10" y="267.4" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.66s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r39"><rect x="10" y="274.2" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.73s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r40"><rect x="10" y="281.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.80s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r41"><rect x="10" y="287.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.87s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r42"><rect x="10" y="294.6" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="2.94s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r43"><rect x="10" y="301.4" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="3.01s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r44"><rect x="10" y="308.2" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="3.08s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r45"><rect x="10" y="315.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="3.15s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r46"><rect x="10" y="321.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="3.22s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r47"><rect x="10" y="328.6" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="3.29s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r48"><rect x="10" y="335.4" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="3.36s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r49"><rect x="10" y="342.2" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="3.43s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r50"><rect x="10" y="349.0" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="3.50s" dur="0.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="r51"><rect x="10" y="355.8" width="0" height="7.8"><animate attributeName="width" from="0" to="378.0" begin="3.57s" dur="0.6s" fill="freeze"/></rect></clipPath>
+</defs>
+<text xml:space="preserve" x="10" y="22.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r1)">                                                ;;;11i,                                                       </text>
+<text xml:space="preserve" x="10" y="28.9" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r2)">                                            ,,,t1fGLfLL:,:it:..itiit.                                         </text>
+<text xml:space="preserve" x="10" y="35.7" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r3)">                                      ..  .fLGCGCCGCffLCCCCGGfL0Cf;t0.                                        </text>
+<text xml:space="preserve" x="10" y="42.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r4)">                                   :fLG0GCCG000C0GGG00CCLGGGLGGGGG0G0Cttt1:                                   </text>
+<text xml:space="preserve" x="10" y="49.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r5)">                              i;. 10000880L0000CGCLLLC0CLGLCCGGLCCG008CG0LGt. :,                              </text>
+<text xml:space="preserve" x="10" y="56.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r6)">                             :8fLG800@888CG0G0080GCG0CG80888G880GCLGCG008LL0GGi1f;                            </text>
+<text xml:space="preserve" x="10" y="62.9" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r7)">                             C0C080888@888808880CG088888888880LCLfLtL00@8GG0G00CC0t                           </text>
+<text xml:space="preserve" x="10" y="69.7" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r8)">                          :it08880880@80808080C0C0LCGCGCL0G0@fCCtGGCCG0GfLCGG0CCLG0t:                         </text>
+<text xml:space="preserve" x="10" y="76.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r9)">                         1iL0088008G08088GGC0CL@0fC0GLLfL008@8@Cf@CLG88LL0888fC0CLC00f,                       </text>
+<text xml:space="preserve" x="10" y="83.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r10)">                         1CCC08G0GC80LG88GC8G8@@CG8G0GtLLG8@0G@8C0CfL@880@@800@CL0GGCL :,                     </text>
+<text xml:space="preserve" x="10" y="90.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r11)">                    :.LLCCGGG088CL@800@@@CC@088C80GGCffG880G0L00CGGtL8C0CC088080GGGGCftfL:                    </text>
+<text xml:space="preserve" x="10" y="96.9" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r12)">                    Lt@0CC000G8@GC88@@@880G8080080801C@0CfCG8GG@GfGGGGtfC0GCfCG@088GtG80Cf,                   </text>
+<text xml:space="preserve" x="10" y="103.7" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r13)">                    f0G@GGGGGG00GLC088888008@8888G88@88GLLLG8088G008ffLtL00fCCf80880GL0GGCi:                  </text>
+<text xml:space="preserve" x="10" y="110.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r14)">                    f8G880000G88Lf00@8@8@@GG8888000G00@0CLLCG0@88@8G0CGGftfGGGLGCGLG8LC88CGG.                 </text>
+<text xml:space="preserve" x="10" y="117.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r15)">                   :C80880@80808G0880080G8@08@@800GG00@0G0LCGGCG@GLL0@@8CL8GG8@0fLG880CL0GGG,                 </text>
+<text xml:space="preserve" x="10" y="124.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r16)">                   0@G088888G0808@@000GG0888888000000GG80CtffLCC88088G8G088fCGG80C08808G0080,                 </text>
+<text xml:space="preserve" x="10" y="130.9" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r17)">                  f8@@888@@@800888@88800@@880GCCLGCfLft8Lfttt1fCG8@0GC0LL8GCLG880fL8008GG8G0t                 </text>
+<text xml:space="preserve" x="10" y="137.7" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r18)">                  @@8@@@@@@@@8@@@@@@@80GCCGCCCLCLCfLCftLCCCL1tfLLC8CGCff1tLLC0@88CGGG8880@0Gi                 </text>
+<text xml:space="preserve" x="10" y="144.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r19)">                  :C8@@@88@800888@@@80GLttft111tt1ttttftft1i1tfLCCCCL1;i;::itfLLG00LG888G00Gf                 </text>
+<text xml:space="preserve" x="10" y="151.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r20)">                   t88@@08@80808@@@80GCfttt11ii;;iiiiiiii;;;;;iii;;;;,....,:;1CLCC1tC00888GGi                 </text>
+<text xml:space="preserve" x="10" y="158.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r21)">                  C@@@@@@@@888880880GLfffftt1i;;;;;;;;iiiii;;;;:,......  ..,:;tf1i1t1001,1 .                  </text>
+<text xml:space="preserve" x="10" y="164.9" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r22)">                  t@@8@@@@@@@800000GLffffffft1i;;;;;;;;iiiiii;;::,,,..,,,,:::::;;iii1@L                       </text>
+<text xml:space="preserve" x="10" y="171.7" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r23)">                 .10@@@@@@@@@0GG0G0CfffffffLt1iiiiiiiiiiii1i11iiii;:::;;;;;;;ii11ff1f@t                       </text>
+<text xml:space="preserve" x="10" y="178.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r24)">                 181LG088@@@@0G0000LfLffffffLCG000800G0000GCCLLLfft1ii11fLLCG080GGGGCf.                       </text>
+<text xml:space="preserve" x="10" y="185.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r25)">                  ;tC0ftt1fG8808000CLLffLLLCC000888888@@@@@@@@@80CLt11fG88880GGGCLffL1                        </text>
+<text xml:space="preserve" x="10" y="192.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r26)">                    ;CGGf1itfLL0800GLLfLLLCGG008000GGGLCCG08@@@@80L1itC80000LLfLLCCfC;                        </text>
+<text xml:space="preserve" x="10" y="198.9" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r27)">                    i0GL1;;fCftfG80CLLLLLffLG088888@@@@C,1G808@88Gf:.1CL88@@80iL80CfL,                        </text>
+<text xml:space="preserve" x="10" y="205.7" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r28)">                    ,GGf1;i111Lff00CCLLLft11tLCG00CLGCC1;itCLG888Gfi.iftL00GGftLCCtff                         </text>
+<text xml:space="preserve" x="10" y="212.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r29)">                     :GLi1GG0@8GfG0GCCLLLt11111tfCGGCLLfLfftfCC00GLt:,111fCGGGCCLf1tf                         </text>
+<text xml:space="preserve" x="10" y="219.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r30)">                      ,0tt@@@0Lf1L0GCCLCLft1ii;;;;i11111i;i1tfLG0GLt:.;i;;;;i111iii1f,                        </text>
+<text xml:space="preserve" x="10" y="226.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r31)">                       ;G1f8@CLfffCGCCCCCLt1;;:::,,....,,::i1fLCGGL1;.,ii;:,::::::;if;                        </text>
+<text xml:space="preserve" x="10" y="232.9" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r32)">                        ;GLLGLC80LCGCGCCCLf1i;;:::,,......:itCGG0Cfti::;ii:,,,.,,:;it;                        </text>
+<text xml:space="preserve" x="10" y="239.7" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r33)">                         ,LCCtfGG0GGCCGCCCCf1i;;::,,......,tG0CCGL1ii, :;i1i:...,:;it:                        </text>
+<text xml:space="preserve" x="10" y="246.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r34)">                           iLLLLCCCGGCCGCCCCLt1i;:::,....,;G@0CLCCLtt;.:i1ttfi:::;;1f                         </text>
+<text xml:space="preserve" x="10" y="253.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r35)">                            ;LLCGLG0CCCCGGCCCLft1;;;::,,:;f0@8@@@@@@8GLtCL;:tLt1111fi                         </text>
+<text xml:space="preserve" x="10" y="260.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r36)">                              :;iC@@CCCCCGCGGGCLf1iii;;;;1tfLGG088888Gf1i:;iitLLfffC.                         </text>
+<text xml:space="preserve" x="10" y="266.9" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r37)">                                 i800CCCCCCCGGGGLftt1111i1ttttffLftiii:::;iiitLCCCGt                          </text>
+<text xml:space="preserve" x="10" y="273.7" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r38)">                                 ,0GGGGCCCCCCGGGGCLftttfLLt1111111;,,:;iii1tCCLCCCG.                          </text>
+<text xml:space="preserve" x="10" y="280.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r39)">                                 ,L0CGGGCCCLCCGGCLft11tG@@8000088888GG0G00GC00LfLGi                           </text>
+<text xml:space="preserve" x="10" y="287.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r40)">                                 ,i0CC0GGCCCCLCCCLfti;;itLG0800GCftff11tLL1:ifffCt                            </text>
+<text xml:space="preserve" x="10" y="294.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r41)">                                 ,:GCLC00GGCCCCCCCLftii;:;1tLCCCCti;i;itf1::itfCt                             </text>
+<text xml:space="preserve" x="10" y="300.9" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r42)">                                 ..CLfLLG880GGGGGGCCLft11ii1fLLCGGGGGCLti;;;i1Lt                              </text>
+<text xml:space="preserve" x="10" y="307.7" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r43)">                               .:1fLLffLCG088000GGGGCLLft111iii1ii;;;;;;;;;iif1                               </text>
+<text xml:space="preserve" x="10" y="314.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r44)">                             ;L8@@0fLttfLCC08888000GGCLfttt1;::,..  ...,::;iti                                </text>
+<text xml:space="preserve" x="10" y="321.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r45)">                           ,G@@@@8LLfttffLCGG08@@8800GCLfftt1i;:,,,,,,,::;iti                                 </text>
+<text xml:space="preserve" x="10" y="328.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r46)">                          .080@@@CCLttttfLLCG0888@@@880GCCLLft11;;;iii;;;i1:,                                 </text>
+<text xml:space="preserve" x="10" y="334.9" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r47)">                         :LC008@@LLLt111tLLCG00888888@@880000GGCCLLCCLfffCt,,                                 </text>
+<text xml:space="preserve" x="10" y="341.7" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r48)">                        1LCLC00@@GLftii1tfLCCGG088000088@@@@@@@8880GGCftL80G1                                 </text>
+<text xml:space="preserve" x="10" y="348.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r49)">                      :ffLGCCGCG@@Cft1ii1tfLLCG0000000008888880GCLLLLt11C@808L.                               </text>
+<text xml:space="preserve" x="10" y="355.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r50)">                    :fLL1fLGCGfLC88L11iii1ttffLLLCCCGGG0000800GCCLLLf11t0@@@80C;                              </text>
+<text xml:space="preserve" x="10" y="362.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r51)">                   ;0fCf1CLfLCLLCC88t1i;;iii111tttttfLCCCCGG000GCLfft1tfG@@@@8GGL1.                           </text>
+</svg>

@@ -1,0 +1,35 @@
+# entorno virtual
+.venv/
+venv/
+env/
+
+# foto original e intermedios del retrato ASCII (nunca se suben)
+foto.jpg
+foto.jpeg
+foto.png
+*.jpg
+*.jpeg
+source-prepped.png
+*-prepped.png
+
+# secretos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+secrets/
+credentials.json
+token.txt
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# sistema / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

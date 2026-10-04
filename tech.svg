@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 302" width="860" height="302">
+<style>text{font-family:ui-monospace,Menlo,Consolas,"DejaVu Sans Mono",monospace;font-size:13px;fill:#c9d1d9;white-space:pre}.g{fill:#39d353}.d{fill:#1f6f3a}.p{fill:#58a6ff}.t{fill:#8b949e;font-size:12px}.w{fill:#f0f6fc}.y{fill:#e3b341}.b{font-weight:bold}.l{opacity:0;animation:in .45s ease-out forwards}.u{opacity:0;animation:up .4s ease-out forwards}@keyframes in{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@keyframes bl{0%,49%{opacity:1}50%,100%{opacity:0}}.cur{animation:bl 1s steps(1) infinite}</style>
+<rect width="860" height="302" rx="10" fill="#0d1117" stroke="#30363d"/>
+<circle cx="20" cy="18" r="5" fill="#ff5f56"/><circle cx="38" cy="18" r="5" fill="#ffbd2e"/><circle cx="56" cy="18" r="5" fill="#27c93f"/>
+<text class="t" x="76" y="22">imandro@github: ~/stack</text>
+<text x="26" y="48"><tspan class="p">$</tspan> cat stack.yml</text>
+<text class="l g b" style="animation-delay:0.20s" x="26" y="81">lenguajes:</text>
+<g class="u" style="animation-delay:0.20s"><rect x="200.0" y="64" width="65.8" height="24" rx="12" fill="#161b22" stroke="#3572A5"/><text class="w" x="211.0" y="80" style="font-size:12px">Python</text></g>
+<g class="u" style="animation-delay:0.25s"><rect x="273.8" y="64" width="95.0" height="24" rx="12" fill="#161b22" stroke="#3572A5"/><text class="w" x="284.8" y="80" style="font-size:12px">TypeScript</text></g>
+<g class="u" style="animation-delay:0.30s"><rect x="376.8" y="64" width="95.0" height="24" rx="12" fill="#161b22" stroke="#3572A5"/><text class="w" x="387.8" y="80" style="font-size:12px">JavaScript</text></g>
+<g class="u" style="animation-delay:0.35s"><rect x="479.8" y="64" width="51.2" height="24" rx="12" fill="#161b22" stroke="#3572A5"/><text class="w" x="490.8" y="80" style="font-size:12px">Dart</text></g>
+<g class="u" style="animation-delay:0.40s"><rect x="539.0" y="64" width="43.9" height="24" rx="12" fill="#161b22" stroke="#3572A5"/><text class="w" x="550.0" y="80" style="font-size:12px">SQL</text></g>
+<g class="u" style="animation-delay:0.45s"><rect x="590.9" y="64" width="80.4" height="24" rx="12" fill="#161b22" stroke="#3572A5"/><text class="w" x="601.9" y="80" style="font-size:12px">HTML/CSS</text></g>
+<text class="l g b" style="animation-delay:0.50s" x="26" y="121">frontend/móvil:</text>
+<g class="u" style="animation-delay:0.50s"><rect x="200.0" y="104" width="58.5" height="24" rx="12" fill="#161b22" stroke="#61dafb"/><text class="w" x="211.0" y="120" style="font-size:12px">React</text></g>
+<g class="u" style="animation-delay:0.55s"><rect x="266.5" y="104" width="51.2" height="24" rx="12" fill="#161b22" stroke="#61dafb"/><text class="w" x="277.5" y="120" style="font-size:12px">Vite</text></g>
+<g class="u" style="animation-delay:0.60s"><rect x="325.7" y="104" width="87.7" height="24" rx="12" fill="#161b22" stroke="#61dafb"/><text class="w" x="336.7" y="120" style="font-size:12px">Capacitor</text></g>
+<g class="u" style="animation-delay:0.65s"><rect x="421.4" y="104" width="43.9" height="24" rx="12" fill="#161b22" stroke="#61dafb"/><text class="w" x="432.4" y="120" style="font-size:12px">PWA</text></g>
+<g class="u" style="animation-delay:0.70s"><rect x="473.3" y="104" width="124.2" height="24" rx="12" fill="#161b22" stroke="#61dafb"/><text class="w" x="484.3" y="120" style="font-size:12px">Android nativo</text></g>
+<g class="u" style="animation-delay:0.75s"><rect x="605.5" y="104" width="116.9" height="24" rx="12" fill="#161b22" stroke="#61dafb"/><text class="w" x="616.5" y="120" style="font-size:12px">Offline-first</text></g>
+<text class="l g b" style="animation-delay:0.80s" x="26" y="161">backend/datos:</text>
+<g class="u" style="animation-delay:0.80s"><rect x="200.0" y="144" width="73.1" height="24" rx="12" fill="#161b22" stroke="#336790"/><text class="w" x="211.0" y="160" style="font-size:12px">Node.js</text></g>
+<g class="u" style="animation-delay:0.85s"><rect x="281.1" y="144" width="87.7" height="24" rx="12" fill="#161b22" stroke="#336790"/><text class="w" x="292.1" y="160" style="font-size:12px">APIs REST</text></g>
+<g class="u" style="animation-delay:0.90s"><rect x="376.8" y="144" width="95.0" height="24" rx="12" fill="#161b22" stroke="#336790"/><text class="w" x="387.8" y="160" style="font-size:12px">PostgreSQL</text></g>
+<g class="u" style="animation-delay:0.95s"><rect x="479.8" y="144" width="51.2" height="24" rx="12" fill="#161b22" stroke="#336790"/><text class="w" x="490.8" y="160" style="font-size:12px">Neon</text></g>
+<g class="u" style="animation-delay:1.00s"><rect x="539.0" y="144" width="58.5" height="24" rx="12" fill="#161b22" stroke="#336790"/><text class="w" x="550.0" y="160" style="font-size:12px">MySQL</text></g>
+<g class="u" style="animation-delay:1.05s"><rect x="605.5" y="144" width="95.0" height="24" rx="12" fill="#161b22" stroke="#336790"/><text class="w" x="616.5" y="160" style="font-size:12px">SQL Server</text></g>
+<text class="l g b" style="animation-delay:1.10s" x="26" y="201">devops:</text>
+<g class="u" style="animation-delay:1.10s"><rect x="200.0" y="184" width="43.9" height="24" rx="12" fill="#161b22" stroke="#f1e05a"/><text class="w" x="211.0" y="200" style="font-size:12px">AWS</text></g>
+<g class="u" style="animation-delay:1.15s"><rect x="251.9" y="184" width="43.9" height="24" rx="12" fill="#161b22" stroke="#f1e05a"/><text class="w" x="262.9" y="200" style="font-size:12px">Git</text></g>
+<g class="u" style="animation-delay:1.20s"><rect x="303.8" y="184" width="124.2" height="24" rx="12" fill="#161b22" stroke="#f1e05a"/><text class="w" x="314.8" y="200" style="font-size:12px">GitHub Actions</text></g>
+<g class="u" style="animation-delay:1.25s"><rect x="436.0" y="184" width="58.5" height="24" rx="12" fill="#161b22" stroke="#f1e05a"/><text class="w" x="447.0" y="200" style="font-size:12px">CI/CD</text></g>
+<g class="u" style="animation-delay:1.30s"><rect x="502.5" y="184" width="65.8" height="24" rx="12" fill="#161b22" stroke="#f1e05a"/><text class="w" x="513.5" y="200" style="font-size:12px">Vercel</text></g>
+<g class="u" style="animation-delay:1.35s"><rect x="576.3" y="184" width="65.8" height="24" rx="12" fill="#161b22" stroke="#f1e05a"/><text class="w" x="587.3" y="200" style="font-size:12px">Gradle</text></g>
+<g class="u" style="animation-delay:1.40s"><rect x="650.1" y="184" width="146.1" height="24" rx="12" fill="#161b22" stroke="#f1e05a"/><text class="w" x="661.1" y="200" style="font-size:12px">Releases firmados</text></g>
+<text class="l g b" style="animation-delay:1.45s" x="26" y="241">ciberseguridad:</text>
+<g class="u" style="animation-delay:1.45s"><rect x="200.0" y="224" width="146.1" height="24" rx="12" fill="#161b22" stroke="#39d353"/><text class="w" x="211.0" y="240" style="font-size:12px">Seguridad de apps</text></g>
+<g class="u" style="animation-delay:1.50s"><rect x="354.1" y="224" width="182.6" height="24" rx="12" fill="#161b22" stroke="#39d353"/><text class="w" x="365.1" y="240" style="font-size:12px">Autenticación (scrypt)</text></g>
+<g class="u" style="animation-delay:1.55s"><rect x="544.7" y="224" width="175.3" height="24" rx="12" fill="#161b22" stroke="#39d353"/><text class="w" x="555.7" y="240" style="font-size:12px">Privacidad por diseño</text></g>
+<g class="u" style="animation-delay:1.60s"><rect x="200.0" y="256" width="153.4" height="24" rx="12" fill="#161b22" stroke="#39d353"/><text class="w" x="211.0" y="272" style="font-size:12px">Bloqueo biométrico</text></g>
+</svg>
