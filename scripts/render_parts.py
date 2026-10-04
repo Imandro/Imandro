@@ -106,18 +106,21 @@ def whoami(y, t):
     return body, 930, y - 26, t
 
 
+import re
+_emoji = re.compile(r'[^\x00-\x7F]+')
 def about(y, t):
     body = label("cat about.md", y, t)
     t += 0.15
-    y += 30
+    y += 28
     for i, para in enumerate(ABOUT):
-        for line in textwrap.wrap(para, 108):
+        clean = _emoji.sub('', para)
+        for line in textwrap.wrap(clean, 108):
             cls = "w" if i == 0 else ""
             body.append(f'<text class="l {cls}" style="animation-delay:{t:.2f}s" x="46" y="{y}">{escape(line)}</text>')
-            y += 22
-            t += 0.1
-        y += 10
-    return body, 930, y - 10, t
+            y += 20
+            t += 0.08
+        y += 8
+    return body, 930, y - 8, t
 
 
 def portrait():
@@ -141,37 +144,27 @@ def portrait():
 
 
 def awards(y, t):
-    """Trofeo + contador, en vertical para poder ir junto al retrato."""
-    CW, LH = 7.6, 16
-    body, defs = [], []
-    for r, line in enumerate(TROPHY):
-        defs.append(f'<clipPath id="w{r}"><rect x="0" y="{y + r*LH - 14}" width="0" height="{LH + 4}">'
-                    f'<animate attributeName="width" from="0" to="{len(line)*CW + 8:.1f}" '
-                    f'begin="{t:.2f}s" dur="0.45s" fill="freeze"/></rect></clipPath>')
-        body.append(f'<text class="y" xml:space="preserve" x="0" y="{y + r*LH}" clip-path="url(#w{r})">{escape(line)}</text>')
-        t += 0.08
-    y += len(TROPHY) * LH + 18
+    """Contador de premios, sin trofeo ASCII ni estrellas."""
     digits = str(AWARDS_COUNT)
-    NW = 9.0
+    NW, LH = 9.0, 18
+    body, defs = [], []
     for r in range(7):
         s = ""
         for k, d in enumerate(digits):
             s += "".join("##" if c == "#" else "  " for c in BITS[d][r]) + ("  " if k < len(digits) - 1 else "")
         defs.append(f'<clipPath id="v{r}"><rect x="0" y="{y + r*LH - 16}" width="0" height="{LH + 6}">'
                     f'<animate attributeName="width" from="0" to="{len(s)*NW + 10:.1f}" '
-                    f'begin="{t + 0.5:.2f}s" dur="0.4s" fill="freeze"/></rect></clipPath>')
+                    f'begin="{t:.2f}s" dur="0.4s" fill="freeze"/></rect></clipPath>')
         body.append(f'<text class="g b" style="font-size:15px" xml:space="preserve" '
                     f'x="0" y="{y + r*LH}" clip-path="url(#v{r})">{s}</text>')
     t += 0.5
-    y += 7 * LH + 22
+    y += 7 * LH + 20
     for lab in AWARDS_LABEL:
         body.append(f'<text class="l w b" style="animation-delay:{t:.2f}s;font-size:15px" x="0" y="{y}">{escape(lab)}</text>')
-        y += 24
-        t += 0.18
+        y += 22
+        t += 0.15
     body.append(f'<text class="l g" style="animation-delay:{t:.2f}s;font-size:14px" x="0" y="{y}">ganados</text>')
-    t += 0.2
-    body.append(f'<text class="y l" style="animation-delay:{t:.2f}s;font-size:16px" x="0" y="{y + 28}">★ ★ ★ ★ ★</text>')
-    return body, defs, 360, y + 30, t
+    return body, defs, 360, y + 20, t
 
 
 def heatmap(t):

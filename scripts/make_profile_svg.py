@@ -35,38 +35,40 @@ def bloque(fn, *args):
 b, d, w, h, t = P.ascii_name(y, t)      # nombre en ASCII -> devuelve alto real
 body += b
 defs += d
-y += h + 16
+y += h + 12
 
 b, _, t = P.slogan(y, t)                # eslogan (omite $ whoami repetido)
 body += b
-y += 34
+y += 28
 
 bloque(P.whoami)                        # $ whoami
-y += 34
+y += 28
 
 bloque(P.about)                         # $ cat about.md
-y += 30
+y += 20
 
 body.append(f'<line x1="{X}" y1="{y}" x2="{W - X}" y2="{y}" stroke="#21262d" stroke-width="1"/>')
-y += 30
+y += 22
 
-# retrato ASCII a la izquierda, trofeo a la derecha, alineados por arriba
-top = y
+# retrato ASCII
 pb, pw, ph = P.portrait()
 if pb:
-    body.append(f'<g transform="translate({X},{top})">{"".join(pb)}</g>')
-ab, ad, aw, ah, t = P.awards(top, t)    # devuelve y absoluta
+    body.append(f'<g transform="translate({X},{y})">{"".join(pb)}</g>')
+    y += ph + 18
+
+# premios
+ab, ad, aw, ah, t = P.awards(y, t)      # devuelve y absoluta
 defs += ad
-body.append(f'<g transform="translate({X + (pw + 72 if pw else 0)},{top})">{"".join(ab)}</g>')
-y = top + max(ph, ah - top) + 26
+body.append(f'<g transform="translate({X},{y})">{"".join(ab)}</g>')
+y = ah + 18
 
 if P.heatmap(t)[0]:                     # $ ./contributions.sh
     body += P.label("./contributions.sh", y, t)
-    t += 0.15
-    y += 26
+    t += 0.12
+    y += 22
     hb, hw, hh, t = P.heatmap(t)
     body.append(f'<g transform="translate({X},{y})">{"".join(hb)}</g>')
-    y += hh + 30
+    y += hh + 24
 
 bloque(P.tech)                          # $ cat stack.yml
 y += 12
@@ -75,7 +77,7 @@ bloque(P.projects)                      # $ ls projects/
 
 body.append(f'<text x="{X}" y="{y + 6}"><tspan class="p">$ </tspan><tspan class="g cur">█</tspan></text>')
 
-H = y + 34
+H = y + 30
 if defs:
     body.insert(0, "<defs>" + "".join(defs) + "</defs>")
 (ROOT / "profile.svg").write_text("\n".join(open_svg(W, H, f"{HANDLE}@github: ~", EXTRA) + body + ["</svg>"]))
