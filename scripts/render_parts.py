@@ -154,11 +154,11 @@ def awards(y, t):
             s += "".join("##" if c == "#" else "  " for c in BITS[d][r]) + ("  " if k < len(digits) - 1 else "")
         defs.append(f'<clipPath id="v{r}"><rect x="0" y="{y + r*LH - 16}" width="0" height="{LH + 6}">'
                     f'<animate attributeName="width" from="0" to="{len(s)*NW + 10:.1f}" '
-                    f'begin="{t:.2f}s" dur="0.4s" fill="freeze"/></rect></clipPath>')
-        body.append(f'<text class="g b" style="font-size:15px" xml:space="preserve" '
+                    f'begin="{t + 0.5:.2f}s" dur="0.4s" fill="freeze"/></rect></clipPath>')
+        body.append(f'<text class="g b" style="font-size:12px" xml:space="preserve" '
                     f'x="0" y="{y + r*LH}" clip-path="url(#v{r})">{s}</text>')
     t += 0.5
-    y += 7 * LH + 40
+    y += 7 * LH + 70
     for lab in AWARDS_LABEL:
         body.append(f'<text class="l w b" style="animation-delay:{t:.2f}s;font-size:15px" x="0" y="{y}">{escape(lab)}</text>')
         y += 24
