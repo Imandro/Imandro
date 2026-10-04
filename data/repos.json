@@ -1,11 +1,11 @@
 [
  {
   "name": "Imandro",
-  "description": "Perfil de terminal con SVG animado: contribuciones, stack, proyectos y premios. Hecho con Python + GitHub Actions.",
+  "description": "Creador de Conecta+ (2 000 usuarios en Latinoamérica), Alivia, duAI y NanoAgent. Python · TypeScript · React · AWS. ",
   "language": "Python",
   "stargazers_count": 1,
   "forks_count": 0,
-  "pushed_at": "2026-10-04T04:00:00Z",
+  "pushed_at": "2026-10-04T04:25:08Z",
   "fork": false,
   "archived": false,
   "html_url": "https://github.com/Imandro/Imandro",
@@ -17,7 +17,7 @@
   "language": "TypeScript",
   "stargazers_count": 4,
   "forks_count": 2,
-  "pushed_at": "2026-10-04T03:05:01Z",
+  "pushed_at": "2026-10-04T04:23:08Z",
   "fork": false,
   "archived": false,
   "html_url": "https://github.com/Imandro/AliviaApp",
