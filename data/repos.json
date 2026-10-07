@@ -1,5 +1,17 @@
 [
  {
+  "name": "Imandro",
+  "description": "Creador de Conecta+ (2 000 usuarios en Latinoamérica), Alivia, duAI y NanoAgent. Python · TypeScript · React · AWS. ",
+  "language": "Python",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "pushed_at": "2026-10-06T13:16:08Z",
+  "fork": false,
+  "archived": false,
+  "html_url": "https://github.com/Imandro/Imandro",
+  "topics": []
+ },
+ {
   "name": "AliviaApp",
   "description": "Refugio digital de bienestar mental para jovenes: respiracion guiada, diario terapeutico y SOS en crisis. Web PWA + app Android nativa, offline-first.",
   "language": "TypeScript",
@@ -31,18 +43,6 @@
    "unan-leon",
    "wellbeing"
   ]
- },
- {
-  "name": "Imandro",
-  "description": "Creador de Conecta+ (2 000 usuarios en Latinoamérica), Alivia, duAI y NanoAgent. Python · TypeScript · React · AWS. ",
-  "language": "Python",
-  "stargazers_count": 1,
-  "forks_count": 0,
-  "pushed_at": "2026-10-05T14:32:24Z",
-  "fork": false,
-  "archived": false,
-  "html_url": "https://github.com/Imandro/Imandro",
-  "topics": []
  },
  {
   "name": "NanoAgent",
