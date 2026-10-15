@@ -1,11 +1,23 @@
 [
  {
+  "name": "Kept",
+  "description": "Kept, una app personal para mis ahorros con ia, nada interesante.",
+  "language": "TypeScript",
+  "stargazers_count": 0,
+  "forks_count": 0,
+  "pushed_at": "2026-10-15T07:23:50Z",
+  "fork": false,
+  "archived": false,
+  "html_url": "https://github.com/Imandro/Kept",
+  "topics": []
+ },
+ {
   "name": "Imandro",
   "description": "Creador de Conecta+ (2 000 usuarios en Latinoamérica), Alivia, duAI y NanoAgent. Python · TypeScript · React · AWS. ",
   "language": "Python",
   "stargazers_count": 1,
   "forks_count": 0,
-  "pushed_at": "2026-10-13T14:07:54Z",
+  "pushed_at": "2026-10-14T11:48:11Z",
   "fork": false,
   "archived": false,
   "html_url": "https://github.com/Imandro/Imandro",
