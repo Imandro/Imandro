@@ -110,6 +110,11 @@ def _portrait(x, y, t):
         parts.append(f"<defs>{inner}</defs>")
     if r:
         parts.append(r.group(1).replace("<text ", '<text class="pa" '))
+    # Difumina el borde inferior del retrato: el recorte se ve intencional.
+    parts.append(f'<defs><linearGradient id="pfade" x1="0" y1="0" x2="0" y2="1">'
+                 f'<stop offset="0" stop-color="#0d1117" stop-opacity="0"/>'
+                 f'<stop offset="1" stop-color="#0d1117"/></linearGradient></defs>'
+                 f'<rect x="0" y="{h - 46:.1f}" width="{w:.1f}" height="46" fill="url(#pfade)"/>')
     return f'<g transform="translate({x},{y})">{"".join(parts)}</g>', w, h
 
 

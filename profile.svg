@@ -117,7 +117,7 @@
 <text class="pa" xml:space="preserve" x="10" y="348.5" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r49)">                      :ffLGCCGCG@@Cft1ii1tfLLCG0000000008888880GCLLLLt11C@808L.                               </text>
 <text class="pa" xml:space="preserve" x="10" y="355.3" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r50)">                    :fLL1fLGCGfLC88L11iii1ttffLLLCCCGGG0000800GCCLLLf11t0@@@80C;                              </text>
 <text class="pa" xml:space="preserve" x="10" y="362.1" textLength="374.0" lengthAdjust="spacing" clip-path="url(#r51)">                   ;0fCf1CLfLCLLCC88t1i;;iii111tttttfLCCCCGG000GCLfft1tfG@@@@8GGL1.                           </text>
-</g>
+<defs><linearGradient id="pfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1117" stop-opacity="0"/><stop offset="1" stop-color="#0d1117"/></linearGradient></defs><rect x="0" y="328.0" width="394.0" height="46" fill="url(#pfade)"/></g>
 <rect x="460" y="229" width="470" height="374" rx="10" fill="#0d1117" stroke="#21262d"/>
 <text class="l" style="animation-delay:1.29s" x="480" y="261"><tspan class="p">$</tspan> whoami</text>
 <text class="l w b" style="animation-delay:1.43s;font-size:15px" x="480" y="291">imandro@github</text>
