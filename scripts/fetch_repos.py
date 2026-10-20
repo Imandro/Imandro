@@ -18,5 +18,5 @@ while True:
     page += 1
 keys = ("name", "description", "language", "stargazers_count", "forks_count", "pushed_at", "fork", "archived", "html_url", "topics")
 (ROOT / "data").mkdir(exist_ok=True)
-(ROOT / "data/repos.json").write_text(json.dumps([{k: x.get(k) for k in keys} for x in repos], indent=1, ensure_ascii=False))
+(ROOT / "data/repos.json").write_text(json.dumps([{k: x.get(k) for k in keys} for x in repos], indent=1, ensure_ascii=False), encoding="utf-8")
 print(f"OK: {len(repos)} repos")

@@ -1,26 +1,32 @@
 """Secciones reutilizables que make_profile_svg.py compone en un unico panel.
 
-Cada funcion devuelve (body, w, h, t): los elementos SVG, su ancho y alto, y
-el delay de animacion acumulado para que las secciones encadenen en cascada.
+Cada funcion devuelve (body, end_y, t) o (body, defs, end_y, t): los elementos
+SVG, la coordenada Y final (absoluta) y el delay de animacion acumulado para
+que las secciones encadenen en cascada.
 """
 import json
 import re
 import textwrap
+from datetime import date
 from html import escape
 from pathlib import Path
 
-from config import (USERNAME, HANDLE, BANNER_NAME, BANNER_LINES, INFO, ABOUT,
-                    AWARDS_COUNT, AWARDS_LABEL, TECH, FEATURED, OTHER_MAX)
-from svgkit import chip, BITS
+from config import (HANDLE, BANNER_NAME, BANNER_LINES, INFO, ABOUT,
+                    AWARDS_COUNT, AWARDS_LABEL)
 
 ROOT = Path(__file__).resolve().parent.parent
+W, X = 960, 30
 
-# Filas de INFO que ya dice otra seccion: la pila vive en tech(), los proyectos
-# en projects() y lo movil tambien esta en tech(). Quitarlas evita el repetition.
+# Filas de INFO que ya dice otra seccion: la pila y los proyectos viven en el
+# README, asi que la tarjeta se queda solo con la identidad.
 INFO_SKIP = {"Stack", "Móvil", "Proyectos"}
 
 # Comandos de BANNER_LINES que se renderizan despues como seccion propia.
 BANNER_SKIP = {"$ whoami"}
+
+# Emoji y pictogramas: se quitan porque la fuente monoespaciada no los dibuja.
+# Los acentos y signos propios del espanol se conservan.
+EMOJI = re.compile("[\U0001F000-\U0001FAFF\u2600-\u27BF\uFE0F]")
 
 LETTERS = {  # fuente 5x7
     "I": ["#####", "..#..", "..#..", "..#..", "..#..", "..#..", "#####"],
@@ -42,14 +48,10 @@ LETTERS = {  # fuente 5x7
     "L": ["#....", "#....", "#....", "#....", "#....", "#....", "#####"],
 }
 
-TROPHY = ["       ___________", "      '._==_==_=_.'", "      .-\\:      /-.", "     | (|:.     |) |",
-          "      '-|:.     |-'", "        \\::.    /", "         '::. .'", "           ) (",
-          "         _.' '._", "        '-------'"]
 
-
-def label(cmd, y, t):
+def label(cmd, y, t, x=X):
     """Linea de prompt `$ comando`."""
-    return [f'<text class="l" style="animation-delay:{t:.2f}s" x="30" y="{y}">'
+    return [f'<text class="l" style="animation-delay:{t:.2f}s" x="{x}" y="{y}">'
             f'<tspan class="p">$</tspan> {escape(cmd)}</text>']
 
 
@@ -66,13 +68,13 @@ def ascii_name(y, t):
     body, defs = [], []
     for r in range(7):
         s = "".join("##" if grid[r][x] else "  " for x in range(cols))
-        defs.append(f'<clipPath id="n{r}"><rect x="30" y="{y + r*LH - 14}" width="0" height="{LH + 4}">'
+        defs.append(f'<clipPath id="n{r}"><rect x="{X}" y="{y + r*LH - 14}" width="0" height="{LH + 4}">'
                     f'<animate attributeName="width" from="0" to="{len(s)*CW + 8:.1f}" '
                     f'begin="{t:.2f}s" dur="0.35s" fill="freeze"/></rect></clipPath>')
         body.append(f'<text class="g b" style="font-size:{FS}px" xml:space="preserve" '
-                    f'x="30" y="{y + r*LH}" clip-path="url(#n{r})">{s}</text>')
+                    f'x="{X}" y="{y + r*LH}" clip-path="url(#n{r})">{s}</text>')
         t += 0.12
-    return body, defs, cols * CW, 7 * LH, t
+    return body, defs, y + 7 * LH, t
 
 
 def slogan(y, t):
@@ -81,193 +83,146 @@ def slogan(y, t):
     for cmd, out in BANNER_LINES:
         if cmd in BANNER_SKIP:
             continue
-        body.append(f'<text class="l" style="animation-delay:{t:.2f}s" x="46" y="{y}">'
+        body.append(f'<text class="l" style="animation-delay:{t:.2f}s" x="{X + 16}" y="{y}">'
                     f'<tspan class="t">&gt; </tspan>{escape(out)}</text>')
         y += 22
         t += 0.15
-    return body, y - 22, t
+    return body, y, t
 
 
-def whoami(y, t):
-    body = label("whoami", y, t)
-    t += 0.15
-    y += 28
-    body.append(f'<text class="l w" style="animation-delay:{t:.2f}s;font-size:15px" x="46" y="{y}">'
-                f'{escape(HANDLE)}@github</text>')
-    y += 28
-    t += 0.12
+def _portrait(x, y, t):
+    """Inserta avi-ascii.svg (se genera aparte: necesita la foto)."""
+    f = ROOT / "avi-ascii.svg"
+    if not f.exists():
+        return "", 0, 0
+    s = f.read_text(encoding="utf-8")
+    m = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', s)
+    if not m:
+        return "", 0, 0
+    w, h = float(m.group(1)), float(m.group(2))
+    d = re.search(r"<defs>(.*?)</defs>", s, re.S)
+    r = re.search(r"</defs>(.*)</svg>", s, re.S)
+    parts = []
+    if d:
+        # El retrato anima al cargar; lo desplazamos para que entre en cascada.
+        inner = re.sub(r'begin="([\d.]+)s"',
+                       lambda mm: f'begin="{float(mm.group(1)) + t:.2f}s"', d.group(1))
+        parts.append(f"<defs>{inner}</defs>")
+    if r:
+        parts.append(r.group(1).replace("<text ", '<text class="pa" '))
+    return f'<g transform="translate({x},{y})">{"".join(parts)}</g>', w, h
+
+
+def _card(x, y, w, t):
+    """Tarjeta neofetch con identidad, logros y foco actual."""
+    H = 374
+    inner = x + 20
+    body = [f'<rect x="{x}" y="{y}" width="{w}" height="{H}" rx="10" '
+            f'fill="#0d1117" stroke="#21262d"/>']
+
+    cy = y + 32
+    body += label("whoami", cy, t, x=inner)
+    cy += 30
+    body.append(f'<text class="l w b" style="animation-delay:{t + 0.14:.2f}s;font-size:15px" '
+                f'x="{inner}" y="{cy}">{escape(HANDLE)}@github</text>')
+    cy += 28
     for k, v in INFO:
         if k in INFO_SKIP:
             continue
-        body.append(f'<text class="l" style="animation-delay:{t:.2f}s" x="46" y="{y}">'
+        body.append(f'<text class="l" style="animation-delay:{t + 0.22:.2f}s" x="{inner}" y="{cy}">'
                     f'<tspan class="k">{escape(k)}:</tspan><tspan dx="10">{escape(v)}</tspan></text>')
-        y += 26
-        t += 0.14
-    return body, 930, y - 26, t
+        cy += 27
+        t += 0.02
+
+    dy = y + 196
+    body.append(f'<line x1="{inner}" y1="{dy}" x2="{x + w - 20}" y2="{dy}" stroke="#21262d"/>')
+    body.append(f'<text class="l g b" style="animation-delay:{t + 0.30:.2f}s;font-size:38px" '
+                f'x="{inner}" y="{dy + 52}">{AWARDS_COUNT}</text>')
+    ly = dy + 28
+    for line in AWARDS_LABEL:
+        body.append(f'<text class="l t" style="animation-delay:{t + 0.36:.2f}s" '
+                    f'x="{inner + 62}" y="{ly}">{escape(line)}</text>')
+        ly += 18
+        t += 0.02
+
+    ny = dy + 78
+    body.append(f'<line x1="{inner}" y1="{ny}" x2="{x + w - 20}" y2="{ny}" stroke="#21262d"/>')
+    body.append(f'<text class="l t" style="animation-delay:{t + 0.44:.2f}s" '
+                f'x="{inner}" y="{ny + 24}">ahora:</text>')
+    ay = ny + 44
+    for line in ("AliviaApp en producción · NanoAgent en Rust",
+                 "abierto a colaborar en impacto social"):
+        body.append(f'<text class="l" style="animation-delay:{t + 0.50:.2f}s" '
+                    f'x="{inner}" y="{ay}"><tspan class="g">▸ </tspan>'
+                    f'<tspan class="t">{escape(line)}</tspan></text>')
+        ay += 19
+    return body, H, t + 0.56
 
 
-import re
-_emoji = re.compile(r'[^\x00-\x7F]+')
+
+def hero(y, t):
+    """Retrato + tarjeta, lado a lado, ocupando todo el ancho."""
+    pb, pw, ph = _portrait(X, y, t)
+    cw = 470
+    cb, ch, t = _card(W - X - cw, y + max(0, (ph - 374)) // 2, cw, t + 0.15)
+    body = ([pb] if pb else []) + cb
+    return body, [], y + max(ph, ch), t
+
+
 def about(y, t):
     body = label("cat about.md", y, t)
     t += 0.15
     y += 28
     for i, para in enumerate(ABOUT):
-        clean = _emoji.sub('', para)
-        for line in textwrap.wrap(clean, 108):
-            cls = "w" if i == 0 else ""
-            body.append(f'<text class="l {cls}" style="animation-delay:{t:.2f}s" x="46" y="{y}">{escape(line)}</text>')
+        clean = EMOJI.sub("", para).strip()
+        for line in textwrap.wrap(clean, 104):
+            cls = "l w" if i == 0 else "l"
+            body.append(f'<text class="{cls}" style="animation-delay:{t:.2f}s" '
+                        f'x="{X + 16}" y="{y}">{escape(line)}</text>')
             y += 20
-            t += 0.08
-        y += 8
-    return body, 930, y - 8, t
+            t += 0.07
+        y += 10
+    return body, y - 10, t
 
 
-def portrait():
-    """Reutiliza avi-ascii.svg (se genera aparte: necesita la foto)."""
-    f = ROOT / "avi-ascii.svg"
-    if not f.exists():
-        return [], 0, 0
-    s = f.read_text(encoding="utf-8")
-    m = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', s)
-    if not m:
-        return [], 0, 0
-    w, h = float(m.group(1)), float(m.group(2))
-    body = []
-    d = re.search(r"<defs>(.*?)</defs>", s, re.S)
-    r = re.search(r"</defs>(.*)</svg>", s, re.S)
-    if d:
-        body.append(f"<defs>{d.group(1)}</defs>")
-    if r:
-        body.append(r.group(1).replace("<text ", '<text class="pa" '))
-    return body, w, h
-
-
-def awards(y, t):
-    """Contador de premios, sin trofeo ASCII ni estrellas."""
-    digits = str(AWARDS_COUNT)
-    NW, LH = 9.0, 18
-    body, defs = [], []
-    for r in range(7):
-        s = ""
-        for k, d in enumerate(digits):
-            s += "".join("##" if c == "#" else "  " for c in BITS[d][r]) + ("  " if k < len(digits) - 1 else "")
-        defs.append(f'<clipPath id="v{r}"><rect x="0" y="{y + r*LH - 16}" width="0" height="{LH + 6}">'
-                    f'<animate attributeName="width" from="0" to="{len(s)*NW + 10:.1f}" '
-                    f'begin="{t + 0.5:.2f}s" dur="0.4s" fill="freeze"/></rect></clipPath>')
-        body.append(f'<text class="g b" style="font-size:12px" xml:space="preserve" '
-                    f'x="0" y="{y + r*LH}" clip-path="url(#v{r})">{s}</text>')
-    t += 0.5
-    y += 7 * LH + 70
-    for lab in AWARDS_LABEL:
-        body.append(f'<text class="l w b" style="animation-delay:{t:.2f}s;font-size:15px" x="0" y="{y}">{escape(lab)}</text>')
-        y += 24
-        t += 0.15
-    body.append(f'<text class="l g" style="animation-delay:{t:.2f}s;font-size:14px" x="0" y="{y}">ganados</text>')
-    return body, defs, 360, y + 28, t
-
-
-def heatmap(t):
+def heatmap(y, t):
+    """Calendario real de contribuciones, 53 semanas x 7 dias."""
+    body = label("./contributions.sh", y, t)
+    t += 0.15
+    y += 24
     f = ROOT / "data/contributions.json"
     if not f.exists():
-        return [], 0, 0, t
-    data = json.loads(f.read_text())
+        return body, y + 20, t
+    data = json.loads(f.read_text(encoding="utf-8"))
     PAL = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
-    from datetime import date
     days = data["days"]
     first = date.fromisoformat(days[0]["date"])
     off = (first.weekday() + 1) % 7
-    P, S, LX, TY = 16, 13, 30, 26
+    P, S, LX = 16, 13, X + 14
+    TY = y
     cols = (len(days) + off - 1) // 7 + 1
-    body, last_m = [], None
+    last_m = None
     for i, d in enumerate(days):
         col, row = (i + off) // 7, (i + off) % 7
         dt = date.fromisoformat(d["date"])
         if row == 0 and dt.month != last_m and col < cols - 2:
-            body.append(f'<text class="hm l" style="animation-delay:{(col)*0.02:.2f}s" x="{LX + col*P}" y="{TY-9}">{dt.strftime("%b")}</text>')
+            body.append(f'<text class="hm l" style="animation-delay:{(col)*0.02:.2f}s" '
+                        f'x="{LX + col*P}" y="{TY-9}">{dt.strftime("%b")}</text>')
             last_m = dt.month
         lvl = min(d["level"], 5)
         body.append(f'<rect class="c" style="animation-delay:{(col+row)*0.02:.2f}s" '
                     f'x="{LX+col*P}" y="{TY+row*P}" width="{S}" height="{S}" rx="3" fill="{PAL[lvl]}">'
                     f'<title>{d["date"]}: {d["count"]}</title></rect>')
     for r, name in ((1, "Lun"), (3, "Mié"), (5, "Vie")):
-        body.append(f'<text class="hm" x="2" y="{TY+r*P+10}">{name}</text>')
-    W = LX + cols * P + 20
+        body.append(f'<text class="hm" x="{LX-28}" y="{TY+r*P+10}">{name}</text>')
+    grid_w = cols * P
     fy = TY + 7 * P + 22
     body.append(f'<text class="hm l" style="animation-delay:.6s" x="{LX}" y="{fy}">'
-                f'{data["total"]:,} contribuciones en el último año · racha actual {data["current_streak"]}'
-                f' · mejor racha {data["longest_streak"]}</text>')
-    lx = W - 20 - 6 * P - 90
+                f'{data["total"]:,} contribuciones en el último año · racha actual '
+                f'{data["current_streak"]} · mejor racha {data["longest_streak"]}</text>')
+    lx = LX + grid_w - 6 * P - 92
     body.append(f'<text class="hm" x="{lx}" y="{fy}">Menos</text>')
     for k, c in enumerate(PAL):
         body.append(f'<rect x="{lx+42+k*P}" y="{fy-10}" width="{S}" height="{S}" rx="3" fill="{c}"/>')
     body.append(f'<text class="hm" x="{lx+46+6*P}" y="{fy}">Más</text>')
-    return body, W, fy + 14, t
-
-
-def tech(y, t):
-    COLORS = ["#3572A5", "#61dafb", "#336790", "#f1e05a", "#39d353"]
-    LX, X0, MAXX = 30, 230, 930
-    body = label("cat stack.yml", y, t)
-    t += 0.15
-    y += 32
-    d = t
-    for ci, (cat, items) in enumerate(TECH.items()):
-        col = COLORS[ci % len(COLORS)]
-        body.append(f'<text class="l g b" style="animation-delay:{d:.2f}s" x="{LX}" y="{y+17}">{escape(cat)}:</text>')
-        x = X0
-        for it in items:
-            _, w = chip(0, 0, it, col, d)
-            if x + w > MAXX:
-                x = X0
-                y += 32
-            c, w = chip(x, y, it, col, d)
-            body.append(c)
-            x += w + 8
-            d += 0.04
-        y += 40
-    return body, 930, y, t
-
-
-def projects(y, t):
-    f = ROOT / "data/repos.json"
-    repos = json.loads(f.read_text()) if f.exists() else []
-    X = 30
-    body = label("ls projects/", y, t)
-    t += 0.15
-    y += 30
-    for p in FEATURED:
-        body.append(f'<text class="l g b" style="animation-delay:{t:.2f}s;font-size:14px" x="{X}" y="{y}">▸ {escape(p["name"])}'
-                    f'<tspan class="t" dx="10" style="font-weight:normal">{escape(p["tag"])}</tspan></text>')
-        y += 21
-        t += 0.18
-        for line in (textwrap.wrap(p["desc"], 100) if p["desc"] else []):
-            body.append(f'<text class="l" style="animation-delay:{t:.2f}s" x="{X+16}" y="{y}">{escape(line)}</text>')
-            y += 19
-            t += 0.07
-        for pt in p["points"]:
-            for i, line in enumerate(textwrap.wrap(pt, 100)):
-                pre = '<tspan class="g">•</tspan> ' if i == 0 else ""
-                body.append(f'<text class="l t" style="animation-delay:{t:.2f}s;font-size:12.5px" x="{X+16}" y="{y}">{pre}{escape(line)}</text>')
-                y += 19
-                t += 0.06
-        x = X + 16
-        y += 2
-        for s in p["stack"]:
-            c, w = chip(x, y, s, "#1f6feb", t)
-            body.append(c)
-            x += w + 8
-            t += 0.03
-        y += 40
-    skip = {p["name"].lower() for p in FEATURED} | {USERNAME.lower()}
-    others = [r for r in repos if not r["fork"] and r["name"].lower() not in skip][:OTHER_MAX]
-    if others:
-        body.append(f'<text class="l t" style="animation-delay:{t:.2f}s" x="{X}" y="{y}">── otros repositorios ──</text>')
-        y += 24
-        t += 0.1
-        line = "  ·  ".join(r["name"] for r in others)
-        for chunk in textwrap.wrap(line, 104):
-            body.append(f'<text class="l t" style="animation-delay:{t:.2f}s" x="{X}" y="{y}">{escape(chunk)}</text>')
-            y += 20
-            t += 0.06
-    return body, 930, y, t
+    return body, fy + 14, t

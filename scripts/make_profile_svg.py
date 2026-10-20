@@ -1,7 +1,8 @@
-"""Compone TODO el perfil en un unico panel de terminal -> profile.svg
+"""Compone el perfil en un unico panel de terminal -> profile.svg
 
-Convencion: las secciones de render_parts devuelven la coordenada Y final
-(absoluta), no un alto. Aqui se convierte con (fin - inicio).
+Orden: identidad (nombre + retrato + tarjeta), historia (about) y actividad
+(contribuciones). Los proyectos y el stack viven en el README como enlaces
+reales: dentro de un <img> nadie puede hacer clic.
 """
 from pathlib import Path
 
@@ -20,65 +21,41 @@ EXTRA = ('.k{fill:#58a6ff}'
 body, defs = [], []
 y, t = 58, 0.15
 
-
-def bloque(fn, *args):
-    """Ejecuta una seccion y avanza y hasta donde termino."""
-    global y, t
-    ini = y
-    r = fn(*args, y, t)
-    body.extend(r[0])
-    y = r[2]
-    t = r[3]
-    return y - ini
-
-
-b, d, w, h, t = P.ascii_name(y, t)      # nombre en ASCII -> devuelve alto real
+# nombre en ASCII + eslogan
+b, d, y, t = P.ascii_name(y, t)
 body += b
 defs += d
-y += h + 12
+y += 10
 
-b, _, t = P.slogan(y, t)                # eslogan (omite $ whoami repetido)
+b, y, t = P.slogan(y, t)
 body += b
-y += 28
+y += 34
 
-bloque(P.whoami)                        # $ whoami
-y += 28
-
-bloque(P.about)                         # $ cat about.md
-y += 20
+# retrato + tarjeta neofetch
+b, d, y, t = P.hero(y, t)
+body += b
+defs += d
+y += 26
 
 body.append(f'<line x1="{X}" y1="{y}" x2="{W - X}" y2="{y}" stroke="#21262d" stroke-width="1"/>')
-y += 22
+y += 24
 
-# retrato ASCII
-pb, pw, ph = P.portrait()
-if pb:
-    body.append(f'<g transform="translate({X},{y})">{"".join(pb)}</g>')
-    y += ph + 18
+# historia
+b, y, t = P.about(y, t)
+body += b
+y += 30
 
-# premios
-ab, ad, aw, ah, t = P.awards(y, t)      # devuelve y absoluta
-defs += ad
-body.append(f'<g transform="translate({X},{y})">{"".join(ab)}</g>')
-y = ah + 18
-
-if P.heatmap(t)[0]:                     # $ ./contributions.sh
-    body += P.label("./contributions.sh", y, t)
-    t += 0.12
-    y += 22
-    hb, hw, hh, t = P.heatmap(t)
-    body.append(f'<g transform="translate({X},{y})">{"".join(hb)}</g>')
-    y += hh + 24
-
-bloque(P.tech)                          # $ cat stack.yml
-y += 12
-
-bloque(P.projects)                      # $ ls projects/
+# actividad real (se refresca a diario con GitHub Actions)
+b, y, t = P.heatmap(y, t)
+body += b
+y += 18
 
 body.append(f'<text x="{X}" y="{y + 6}"><tspan class="p">$ </tspan><tspan class="g cur">█</tspan></text>')
 
 H = y + 30
 if defs:
     body.insert(0, "<defs>" + "".join(defs) + "</defs>")
-(ROOT / "profile.svg").write_text("\n".join(open_svg(W, H, f"{HANDLE}@github: ~", EXTRA) + body + ["</svg>"]))
-print(f"OK: profile.svg ({W}x{H})")
+(ROOT / "profile.svg").write_text(
+    "\n".join(open_svg(W, H, f"{HANDLE}@github: ~", EXTRA) + body + ["</svg>"]),
+    encoding="utf-8")
+print(f"OK: profile.svg ({W}x{H:.0f})")

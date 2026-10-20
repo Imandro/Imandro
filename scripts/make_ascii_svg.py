@@ -30,5 +30,5 @@ for r in range(rows):
         o.append(f'<text xml:space="preserve" x="10" y="{10+(r+1)*RH-1.5:.1f}" textLength="{COLS*CW:.1f}" '
                  f'lengthAdjust="spacing" clip-path="url(#r{r})">{line}</text>')
 o.append("</svg>")
-(ROOT / "avi-ascii.svg").write_text("\n".join(o))
+(ROOT / "avi-ascii.svg").write_text("\n".join(o), encoding="utf-8")
 print("OK: avi-ascii.svg")

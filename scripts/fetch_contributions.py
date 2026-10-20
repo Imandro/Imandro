@@ -41,5 +41,5 @@ best = max(days, key=lambda x: x["count"])
 (ROOT / "data").mkdir(exist_ok=True)
 (ROOT / "data/contributions.json").write_text(json.dumps({
     "total": total, "current_streak": cur, "longest_streak": longest,
-    "best_day": best, "days": days}, indent=1))
+    "best_day": best, "days": days}, indent=1), encoding="utf-8")
 print(f"OK: {len(days)} días, {total} contribuciones")
