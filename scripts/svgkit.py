@@ -3,7 +3,7 @@ from html import escape
 
 FONT = 'ui-monospace,Menlo,Consolas,"DejaVu Sans Mono",monospace'
 CSS = (f'text{{font-family:{FONT};font-size:13px;fill:#c9d1d9;white-space:pre}}'
-       '.g{fill:#39d353}.d{fill:#1f6f3a}.p{fill:#58a6ff}.t{fill:#8b949e;font-size:12px}'
+       '.g{fill:#58a6ff}.d{fill:#1f4f7a}.p{fill:#58a6ff}.t{fill:#8b949e;font-size:12px}'
        '.w{fill:#f0f6fc}.y{fill:#e3b341}.b{font-weight:bold}'
        '.l{opacity:0;animation:in .45s ease-out forwards}'
        '.u{opacity:0;animation:up .4s ease-out forwards}'
