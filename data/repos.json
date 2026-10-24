@@ -1,5 +1,17 @@
 [
  {
+  "name": "Imandro",
+  "description": "Creador de Conecta+ (2 000 usuarios en Latinoamérica), Alivia, duAI y NanoAgent. Python · TypeScript · React · AWS. ",
+  "language": "Python",
+  "stargazers_count": 1,
+  "forks_count": 0,
+  "pushed_at": "2026-10-23T11:34:35Z",
+  "fork": false,
+  "archived": false,
+  "html_url": "https://github.com/Imandro/Imandro",
+  "topics": []
+ },
+ {
   "name": "Cislunar-Junior",
   "description": null,
   "language": "HTML",
@@ -9,18 +21,6 @@
   "fork": false,
   "archived": false,
   "html_url": "https://github.com/Imandro/Cislunar-Junior",
-  "topics": []
- },
- {
-  "name": "Imandro",
-  "description": "Creador de Conecta+ (2 000 usuarios en Latinoamérica), Alivia, duAI y NanoAgent. Python · TypeScript · React · AWS. ",
-  "language": "Python",
-  "stargazers_count": 1,
-  "forks_count": 0,
-  "pushed_at": "2026-10-22T11:47:32Z",
-  "fork": false,
-  "archived": false,
-  "html_url": "https://github.com/Imandro/Imandro",
   "topics": []
  },
  {
