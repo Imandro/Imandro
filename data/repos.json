@@ -1,11 +1,23 @@
 [
  {
+  "name": "ConectaMas",
+  "description": "Conecta+ ",
+  "language": "TypeScript",
+  "stargazers_count": 2,
+  "forks_count": 0,
+  "pushed_at": "2026-10-28T05:59:39Z",
+  "fork": false,
+  "archived": false,
+  "html_url": "https://github.com/Imandro/ConectaMas",
+  "topics": []
+ },
+ {
   "name": "Imandro",
   "description": "Creador de Conecta+ (2 000 usuarios en Latinoamérica), Alivia, duAI y NanoAgent. Python · TypeScript · React · AWS. ",
   "language": "Python",
   "stargazers_count": 1,
   "forks_count": 0,
-  "pushed_at": "2026-10-26T12:55:57Z",
+  "pushed_at": "2026-10-27T12:06:48Z",
   "fork": false,
   "archived": false,
   "html_url": "https://github.com/Imandro/Imandro",
@@ -137,18 +149,6 @@
   "fork": true,
   "archived": false,
   "html_url": "https://github.com/Imandro/INCLU",
-  "topics": []
- },
- {
-  "name": "ConectaMas",
-  "description": "Conecta+ ",
-  "language": "TypeScript",
-  "stargazers_count": 2,
-  "forks_count": 0,
-  "pushed_at": "2026-06-11T05:12:01Z",
-  "fork": false,
-  "archived": false,
-  "html_url": "https://github.com/Imandro/ConectaMas",
   "topics": []
  },
  {
