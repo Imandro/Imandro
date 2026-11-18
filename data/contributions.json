@@ -1,7 +1,7 @@
 {
- "total": 356,
- "current_streak": 49,
- "longest_streak": 49,
+ "total": 357,
+ "current_streak": 50,
+ "longest_streak": 50,
  "best_day": {
   "date": "2026-10-04",
   "level": 4,
@@ -1840,6 +1840,11 @@
   },
   {
    "date": "2026-11-17",
+   "level": 1,
+   "count": 1
+  },
+  {
+   "date": "2026-11-18",
    "level": 0,
    "count": 0
   }
