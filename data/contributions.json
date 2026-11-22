@@ -1,48 +1,13 @@
 {
- "total": 360,
- "current_streak": 53,
- "longest_streak": 53,
+ "total": 332,
+ "current_streak": 54,
+ "longest_streak": 54,
  "best_day": {
   "date": "2026-10-04",
   "level": 4,
   "count": 41
  },
  "days": [
-  {
-   "date": "2025-11-16",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-11-17",
-   "level": 1,
-   "count": 3
-  },
-  {
-   "date": "2025-11-18",
-   "level": 1,
-   "count": 1
-  },
-  {
-   "date": "2025-11-19",
-   "level": 2,
-   "count": 18
-  },
-  {
-   "date": "2025-11-20",
-   "level": 1,
-   "count": 7
-  },
-  {
-   "date": "2025-11-21",
-   "level": 0,
-   "count": 0
-  },
-  {
-   "date": "2025-11-22",
-   "level": 0,
-   "count": 0
-  },
   {
    "date": "2025-11-23",
    "level": 0,
@@ -1860,6 +1825,11 @@
   },
   {
    "date": "2026-11-21",
+   "level": 1,
+   "count": 1
+  },
+  {
+   "date": "2026-11-22",
    "level": 0,
    "count": 0
   }
